@@ -1,0 +1,53 @@
+body {
+    background-color:thistle;
+}
+
+.format-header{
+    display: grid;
+    grid-template-rows: 75px;
+    border: 2px solid blue;
+    text-align: center;
+    text-shadow: 2px 2px yellow;
+}
+
+.format-content, img{
+    display: grid;
+    grid-template-rows: repeat(3, 3fr);
+    grid-template-columns: repeat(3, 3fr);
+    margin: 2% 5%;
+}
+
+.rotate{ 
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate{
+   0%{
+    transform: rotate(0)
+   }
+   100% {
+    transform: rotate(360deg);
+   }
+} 
+
+.format-content{
+    position: relative;
+}
+
+.format-content img{
+    /* position: absolute; */
+    /* -webkit-animation: ease-out; */
+     /* -moz-animation: opacity 1s ease-in-out;  */
+    -o-animation: opacity 1s ease-in-out; 
+    transition: 2s ease;
+}
+
+.format-content img.cross-out:hover{
+    opacity:0;
+}
+
+p:hover{
+    opacity:1;
+}
